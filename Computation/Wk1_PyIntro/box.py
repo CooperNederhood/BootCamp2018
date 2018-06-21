@@ -25,7 +25,7 @@ def isvalid(roll, remaining):
     '''
     if roll not in range(2, 13):
         return False
-    for i in xrange(1, len(remaining) + 1):
+    for i in range(1, len(remaining) + 1):
         if any([sum(combo) == roll for combo in combinations(remaining, i)]):
             return True
     return False
@@ -54,3 +54,4 @@ def parse_input(player_input, remaining):
         return choices
     except ValueError:
         return []
+
